@@ -1,5 +1,8 @@
+export {Comment, Student}
+
 class Student {
-  constructor({ name,
+  constructor({ 
+    name,
     email,
     username,
     twitter = null,
@@ -86,19 +89,20 @@ class Comment{
   constructor({
     message, 
     name,
-    role = "student",
+    rolls = "student",
     likes = 0
   }){
     this.message = message;
     this.name = name;
-    this.role = role;
+    this.rolls = rolls;
     this.likes = likes;
   }
 
   publish(){
-    console.log(this.name +'('+this.role+')');
+    console.log(this.name +'('+this.rolls+')');
     console.log(this.likes+" likes");
     console.log(this.message);
+    console.log(this.rolls);
   }
 }
 
